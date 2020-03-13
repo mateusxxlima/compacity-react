@@ -1,0 +1,11 @@
+footer{
+    margin-top: 40px;
+}
+
+.page-footer{
+    padding-top: 0px !important;
+}
+
+.page-footer .footer-copyright{
+    background: none !important;
+}
