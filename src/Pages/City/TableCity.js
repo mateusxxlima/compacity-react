@@ -1,13 +1,6 @@
 import React, { Component } from 'react'
 
 class TableCity extends Component {
-
-    constructor(props) {
-        super(props)
-
-        var name = ''
-
-    }    
     
     render() {                            
 

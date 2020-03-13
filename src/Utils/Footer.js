@@ -1,7 +1,6 @@
 
 import React from 'react'
 import './footer.css'
-import LinkWrapper from './LinkWrapper'
 
 const Footer = () => {
 

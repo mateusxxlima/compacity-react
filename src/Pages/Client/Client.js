@@ -15,7 +15,9 @@ class Client extends Component {
         super(props)
 
         this.state = {
-            client : {}
+            client : {
+                cidadeModel: {}
+            }
         }
 
     }
@@ -23,6 +25,7 @@ class Client extends Component {
     createClient = client => {
       
         ApiService.createClient(JSON.stringify(client))
+        .then(res => PopUp.showMessage('green', 'Cliente cadastrado com sucesso!'))
         .catch(res => PopUp.showMessage('red', 'Erro ao cadastrar cliente!'))
 
     }
@@ -31,24 +34,24 @@ class Client extends Component {
 
         ApiService.getClientById(clientId)
             .then(res => this.setState({ client : res}))
-            .catch(err => PopUp.showMessage('red', 'Não existe cliente para este Id!'))
+            .catch(err => PopUp.showMessage('red', 'Cliente inesistente!'))
 
     }
 
     getClientByName = name => {        
 
         ApiService.getClientByName(name)
-            .then(res => console.log(res))
             .then(res => this.setState({ client : res}))
-            .catch(err => PopUp.showMessage('red', 'Não existe cliente com este nome!'))       
+            .catch(err => PopUp.showMessage('red', 'Cliente inesistente!'))       
 
     }
 
     removeClient = clientId => {
 
-        ApiService.removeClient(clientId)
-        this.setState({client : {}})
-        PopUp.showMessage('green', 'Cliente removido com sucesso!')
+        ApiService.removeClient(JSON.stringify(clientId))
+            .then(res => console.log(res))
+            this.setState({client : {}})
+            PopUp.showMessage('green', 'Cliente removido com sucesso!')
 
     }
 

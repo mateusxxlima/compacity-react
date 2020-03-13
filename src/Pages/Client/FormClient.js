@@ -11,7 +11,9 @@ class FormClient extends Component {
             sexo: '',
             dataNascimento: '',
             idade: '',
-            cidadeModel : {cidadeId : 4202008}
+            cidadeModel : {
+                cidadeId : 4209003
+            }
         }
 
         this.state = this.initialState
@@ -90,7 +92,7 @@ class FormClient extends Component {
                             name="idade"
                             value = { idade }
                             onChange = { this.inputListen } />
-                    </div>              
+                    </div>                        
 
                 </div>
 

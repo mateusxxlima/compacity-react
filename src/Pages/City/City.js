@@ -22,6 +22,7 @@ class City extends Component {
     createCity = city => {
 
         ApiService.createCity(JSON.stringify(city))
+            .then(res => PopUp.showMessage('green', 'Cidade cadastrada com sucesso!'))
             .catch(res => PopUp.showMessage('red', 'Erro ao cadastrar cidade!'))
 
     }

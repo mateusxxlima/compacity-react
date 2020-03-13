@@ -1,18 +1,11 @@
 import React, { Component } from 'react'
 
 class TableClient extends Component {
-
-    constructor(props) {
-        super(props)
-
-        var clientId = ''
-        var name = ''
-
-    }
     
     render() {
 
-        const { client, getClientById, removeClient, getClientByName } = this.props                
+        const { client, getClientById, removeClient, getClientByName } = this.props    
+
 
         return (
 
