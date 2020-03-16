@@ -34,7 +34,7 @@ class Client extends Component {
 
         ApiService.getClientById(clientId)
             .then(res => this.setState({ client : res}))
-            .catch(err => PopUp.showMessage('red', 'Cliente inesistente!'))
+    .catch(err => PopUp.showMessage('red', 'Cliente inesistente!'))
 
     }
 
