@@ -6,8 +6,10 @@ import ApiService from '../../Utils/ApiService'
 import Header from '../../Utils/Header'
 import Footer from '../../Utils/Footer'
 import PopUp from '../../Utils/PopUp'
-import FormClient from './FormClient'
+
 import TableClient from './TableClient'
+import FormClient from './FormClient'
+import DataClient from './DataClient'
 
 class Client extends Component {
 
@@ -17,7 +19,8 @@ class Client extends Component {
         this.state = {
             client : {
                 cidadeModel: {}
-            }
+            },
+            allClient : []
         }
 
     }
@@ -55,6 +58,13 @@ class Client extends Component {
 
     }
 
+    componentDidMount() {
+
+        ApiService.getAllClients()
+            .then(res => this.setState({allClient : res}))    
+        
+    }
+
     render() {
 
         return (
@@ -74,6 +84,9 @@ class Client extends Component {
 
                     <FormClient
                         createClient = { this.createClient } />
+
+                    <DataClient
+                        allClient = { this.state.allClient } />
 
                 </div>
 

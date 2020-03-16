@@ -1,5 +1,12 @@
 const ApiService = {
 
+    getAllCities : () => {
+        
+        return fetch(`http://localhost:8080/cidades`)
+            .then(res => res.json())        
+
+    },
+
     // Search city by name
     getCityByName : name => {
 
@@ -34,6 +41,15 @@ const ApiService = {
 
 
     // ROUTES CLIENT
+
+    // Get all clients
+
+    getAllClients : () => {
+
+        return fetch(`http://localhost:8080/clientes`)
+            .then(res => res.json())        
+
+    },
 
     // Search client by id
     getClientById : id => {

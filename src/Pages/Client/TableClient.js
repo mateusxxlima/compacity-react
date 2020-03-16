@@ -19,7 +19,7 @@ class TableClient extends Component {
                         <th>Sexo</th>
                         <th>Data Nasc</th>
                         <th>Idade</th>
-                    </tr>
+                    </tr>   
                 </thead>
 
                 <tbody>
