@@ -8,9 +8,7 @@ Projeto construido usando React JS, bootstrapped com `create-react-app`, para ro
 
 ## API
 
-Em conjunto com este projeto foi desenvolvida uma API em Spring boot, ela foi desenvolvida pelo meu colega Rafael, e você pode ter acesso ao repositório dele no GitHub em: 
-
-* **Rafael** - [rafamp1991](https://github.com/rafamp1991/DesafioBackend)
+Em conjunto com este projeto foi desenvolvida uma API em Spring boot e você pode ter acesso ao repositório no link [rafamp1991](https://github.com/rafamp1991/DesafioBackend).
 
 Para conectar a uma API externa basta alterar o endereço para o link da API em questão.
 
