@@ -43,7 +43,7 @@ class DataClient extends Component {
     render() {
 
         return (
-            <table className="centered highlight">
+            <table className="centered striped">
                 <TableHead />
                 <TableBody allClient = {  this.props.allClient } />
             </table>

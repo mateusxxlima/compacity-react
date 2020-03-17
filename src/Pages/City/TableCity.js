@@ -5,7 +5,8 @@ class TableCity extends Component {
     render() {                            
 
         return (
-            <table>
+
+            <table className="centered striped">
 
                 <thead>
                     <tr>

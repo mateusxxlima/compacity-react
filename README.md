@@ -2,9 +2,16 @@
 
 ## Descrição
 
-Projeto idealizado por Mateus Lima, para um desafio na empresa CompassoUOL, Chapecó - SC 
+Projeto criado por Mateus Lima, para um desafio na empresa CompassoUOL, Chapecó - SC 
 
 Projeto construido usando React JS, bootstrapped com `create-react-app`, para rodar o projeto basta dar o comando `npm start` e acessar o endereço http://localhost:3000 no navegador.
+
+## API
+
+Em conjunto com este projeto foi desenvolvida uma API em Spring boot, ela foi desenvolvida pelo meu colega Rafael, e você pode ter acesso ao repositório dele no GitHub em: 
+
+* **Rafael** - [rafamp1991](https://github.com/rafamp1991/DesafioBackend)
+
 Para conectar a uma API externa basta alterar o endereço para o link da API em questão.
 
 ## Arquitetura e componentização
