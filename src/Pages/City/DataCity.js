@@ -37,7 +37,7 @@ class DataCity extends Component {
     render() {
 
         return (
-            <table className="centered striped">
+            <table className="dataTable striped">
                 <TableHead />
                 <TableBody allCities = {  this.props.allCities } />
             </table>
