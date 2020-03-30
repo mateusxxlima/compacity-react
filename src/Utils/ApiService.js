@@ -3,7 +3,8 @@ const ApiService = {
     getAllCities : () => {
         
         return fetch(`http://localhost:8080/cidades`)
-            .then(res => res.json())        
+            .then(res => res.json())
+            .catch(err => console.log('Erro -> ', err))        
 
     },
 
@@ -12,6 +13,7 @@ const ApiService = {
 
         return fetch(`http://localhost:8080/cidade/${name}`)
             .then(res => res.json())
+            .catch(err => console.log('Erro -> ', err))
 
     },
 
@@ -23,19 +25,23 @@ const ApiService = {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-        }, body: city})
+        }, body: JSON.stringify(city)})
+            .then(res => res.json())
+            .catch(err => console.log('Erro -> ', err))
 
     },
 
     // Remove city
     removeCity : id => {
 
-        return fetch(`http://localhost:8080/cidade/${id}`, 
-        {method : 'DELETE',
-        headers : {
-            'content-type' : 'application/json'
-        }})
-            .then(res => res.json())  
+        return fetch(`http://localhost:8080/cidade/${id}`, {
+            method : 'DELETE',
+            headers : {
+                'content-type' : 'application/json'
+            }
+        })
+        .then(res => res.json()) 
+        .catch(err => console.log('Erro -> ',err)) 
 
     },
 
@@ -47,7 +53,8 @@ const ApiService = {
     getAllClients : () => {
 
         return fetch(`http://localhost:8080/clientes`)
-            .then(res => res.json())        
+            .then(res => res.json())
+            .catch(err => console.log('Erro -> ', err))        
 
     },
 
@@ -56,6 +63,7 @@ const ApiService = {
 
         return fetch(`http://localhost:8080/clienteId/${id}`)
             .then(res => res.json())
+            .catch(err => console.log('Erro -> ', err))
 
     },
 
@@ -64,19 +72,24 @@ const ApiService = {
 
         return fetch(`http://localhost:8080/clienteNome/${name}`)
             .then(res => res.json())
+            .catch(err => console.log('Erro -> ', err))
+            
 
     },
 
     // Create new client
     createClient : client => {
-
-        return fetch(`http://localhost:8080/cliente`, 
-        {method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        }, body: client})
-            .then(res => res.json())
+        
+        return fetch(`http://localhost:8080/cliente`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(client)
+        })
+        .then(res => res.json())
+        .catch(err => console.log('Erro -> ', err))
 
     },
 
@@ -87,7 +100,8 @@ const ApiService = {
         {method : 'DELETE',
         headers : {
             'content-type' : 'application/json'}})
-            .then(res => res.json()) 
+            .then(res => res.json())
+            .catch(err => console.log('Erro -> ', err)) 
 
     },
 

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getAllCity } from '../../store/actions/city.action'
 
 const TableHead = () => {
     return (
@@ -34,16 +36,29 @@ const TableBody = props => {
 
 class DataCity extends Component {
     
+    componentDidMount() {
+
+        this.props.getAllCity()
+
+    }
+
     render() {
 
         return (
             <table className="dataTable striped">
                 <TableHead />
-                <TableBody allCities = {  this.props.allCities } />
+                <TableBody allCities = {  this.props.city } />
             </table>
         );
     }
 }
 
+const mapStateToProps = state => ({
+    city : state.arrayCityReducer
+})
 
-export default DataCity
+const mapDispatchToProps = dispatch => ({
+    getAllCity: () => dispatch(getAllCity())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(DataCity)

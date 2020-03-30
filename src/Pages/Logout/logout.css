@@ -1,0 +1,28 @@
+.divBodyLogin {
+    height: 600px;
+    background-size: cover;
+    background-image: url(city.jpg);
+}
+.logout .card {
+    margin-top: 25%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.logout h4 {
+    margin-top: 0px;
+    padding: 30px;
+    color: white;
+}
+.logout button {
+    margin-top: 5%;
+    width: 100%;
+}
+.logout h3 {
+    margin-top: 3px;
+    margin-bottom: 10%;
+}
+.logout .card-action {
+    height: 90px;
+}
+.logout a {
+    color: white;
+}

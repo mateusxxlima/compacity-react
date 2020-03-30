@@ -1,0 +1,37 @@
+.divBody {
+    height: 700px;
+    background-size: cover;
+    background-image: url(city.jpg);
+}
+.login .card {
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.6);
+}
+.login label {
+    color: white;
+    font-size: 16pt;
+}
+.login input {
+    font-size: 16pt !important;
+    color: white;
+}
+.login label span {
+    color: white;
+    font-size: 14pt !important;
+}
+.login #btnLogin {
+    width: 100%;
+}
+.login #btnRegister {
+    margin-top: 10px;
+    width: 100%;
+}
+.login a{
+    color: white;
+}
+.login h3 {
+    margin-top: 3px;
+}
+.login .card-action {
+    height: 90px;
+}

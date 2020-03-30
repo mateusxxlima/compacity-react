@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addClient } from '../../store/actions/client.action'
 
 class FormClient extends Component {
 
@@ -12,7 +14,7 @@ class FormClient extends Component {
             dataNascimento: '',
             idade: '',
             cidadeModel : {
-                cidadeId : 4209003
+                cidadeId : 4100103
             }
         }
 
@@ -31,8 +33,8 @@ class FormClient extends Component {
     }
 
     submit = () => {
-        this.props.createClient(this.state)
-        this.setState(this.initialState)
+        this.props.addClient(this.state)
+        this.setState(this.initialState)     
     }
 
     render() {
@@ -111,4 +113,12 @@ class FormClient extends Component {
     }
 }
 
-export default FormClient
+const mapStateToProps = state => ({
+
+})
+
+const mapDispatchToProps = dispatch => ({
+    addClient: client => dispatch(addClient(client))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormClient)

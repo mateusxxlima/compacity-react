@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getAllClients } from '../../store/actions/client.action'
 
 const TableHead = () => {
     return (
@@ -40,16 +42,27 @@ const TableBody = props => {
 
 class DataClient extends Component {
     
+    componentDidMount() {
+        this.props.getAllClients()
+    }
+
     render() {
 
         return (
             <table className="dataTable striped">
                 <TableHead />
-                <TableBody allClient = {  this.props.allClient } />
+                <TableBody allClient = { this.props.arrayClient } />
             </table>
         );
     }
 }
 
+const mapStateToProps = state => ({
+    arrayClient : state.arrayClientReducer
+})
 
-export default DataClient
+const mapDispatchToProps = dispatch => ({
+    getAllClients: () => dispatch(getAllClients())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(DataClient)

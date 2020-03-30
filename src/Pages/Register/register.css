@@ -1,0 +1,33 @@
+.divBody {
+    height: 600px;
+    background-size: cover;
+    background-image: url(city.jpg);
+}
+.register .card {
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.6);
+}
+.register label {
+    color: white;
+    font-size: 12pt;
+}
+.register input {
+    font-size: 12pt !important;
+    color: white;
+}
+.register button {
+    width: 100%;
+}
+.register label span {
+    color: white;
+    font-size: 10pt !important;
+}
+.register .myInput {
+    height: 30px !important;
+}
+.register h3 {
+    margin-top: 3px;
+}
+.register .card-action {
+    height: 90px;
+}

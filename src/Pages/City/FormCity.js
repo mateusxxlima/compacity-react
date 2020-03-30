@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addCity } from '../../store/actions/city.action'
 
 class FormCity extends Component {
 
@@ -30,8 +32,8 @@ class FormCity extends Component {
     }
 
     submit = () => {
-        this.props.createCity(this.state)
-        this.setState(this.initialState)
+        this.props.addCity(this.state)
+        this.setState(this.initialState)        
     }
 
     render() {
@@ -89,4 +91,12 @@ class FormCity extends Component {
     }
 }
 
-export default FormCity
+const mapStateToProps = state => ({
+
+})
+
+const mapDispatchToProps = dispatch => ({
+    addCity: city => dispatch(addCity(city))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormCity)
