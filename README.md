@@ -11,8 +11,8 @@ Para conectar a uma API externa basta alterar o endereço para o link da API em 
 
 Os pré requisitos para rodar o projeto Compacity são:
 * Nodejs Apartir da versão 12.16.1
-** ReactJS
-** React
-** Materialize-css
-** Ract-dom
-** React-router
+* ReactJS
+* React
+* Materialize-css
+* Ract-dom
+* React-router
